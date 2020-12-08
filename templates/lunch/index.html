@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #444444;
+        }
+
+        .a{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%,-50%);
+
+            text-align: center;
+            
+        }
+
+        p{
+            color: #ffffff;
+            font-size: 30px;
+        }
+
+    </style>
+</head>
+<body>
+    {% autoescape off %}
+    <div class="a">
+        <p style="font-size: 40;"><strong>오늘의 날짜 : {{ now_time }}</strong></p>
+
+        <p>{{ last_lunch }}</p>
+    {% endautoescape %}
+    </div>    
+</body>
+</html>
+
